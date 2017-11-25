@@ -1,1 +1,37 @@
-@import 'styles/general.scss'
+@import 'styles/general.scss';
+@import 'styles/user-tile.scss';
+
+
+.u-row {
+  display: flex;
+}
+
+.u-space-between {
+  justify-content: space-between;
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-center {
+  justify-content: center;
+}
+
+$padding: 10px;
+
+.u-padding--top {
+  padding-top: $padding;
+}
+
+.u-padding--bottom {
+  padding-bottom: $padding;
+}
+
+.u-padding--left {
+  padding-left: $padding;
+}
+
+.u-padding--right {
+  padding-right: $padding;
+}

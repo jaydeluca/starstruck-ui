@@ -21,3 +21,44 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+.user-tile {
+  border: 1px solid black; }
+  .user-tile--box {
+    padding: 20px; }
+  .user-tile ul {
+    padding: 0; }
+    .user-tile ul li {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #dadada; }
+      .user-tile ul li span {
+        margin: 3px 5px; }
+
+.income-table td, .income-table th {
+  padding: 5px 10px; }
+
+.u-row {
+  display: flex; }
+
+.u-space-between {
+  justify-content: space-between; }
+
+.u-flex {
+  display: flex; }
+
+.u-center {
+  justify-content: center; }
+
+.u-padding--top {
+  padding-top: 10px; }
+
+.u-padding--bottom {
+  padding-bottom: 10px; }
+
+.u-padding--left {
+  padding-left: 10px; }
+
+.u-padding--right {
+  padding-right: 10px; }

@@ -1,0 +1,27 @@
+.user-tile {
+  border: 1px solid black;
+
+  &--box {
+    padding: 20px;
+  }
+
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #dadada;
+      span {
+        margin: 3px 5px;
+      }
+    }
+  }
+
+}
+
+.income-table {
+  td, th {
+    padding: 5px 10px;
+  }
+}

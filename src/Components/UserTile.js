@@ -1,21 +1,5 @@
 import React from 'react';
 
-const divContainer = {
-  borderWidth: 1,
-  borderColor: 'black',
-  margin: 20,
-};
-
-const divFlex = {
-  display: 'flex',
-  justifyContent: 'space-between',
-};
-
-const tableStyle = {
-  borderWidth: 1,
-  borderColor: 'black',
-};
-
 export default class UserTile extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   render() {
@@ -28,38 +12,38 @@ export default class UserTile extends React.PureComponent { // eslint-disable-li
     };
 
     return (
-      <div style={divContainer}>
+      <div className="user-tile">
         <h1>{user.username}</h1>
-        <div style={divFlex}>
-          <div>
+        <div className="u-row u-space-between">
+          <div className="user-tile--box">
             <h3>Units:</h3>
             <ul>
               {Object.keys(user.units).map(function(key, index) {
-                return <li key={index}>{key}: {user.units[key]}</li>;
+                return <li key={index}><span>{key}:</span> <span>{user.units[key]}</span></li>;
               })}
             </ul>
           </div>
-          <div>
+          <div className="user-tile--box">
             <h3>Asteroids:</h3>
             <ul>
               {Object.keys(user.assets.asteroids).map(function(key, index) {
-                return <li key={index}>{key}: {user.assets.asteroids[key]}</li>;
+                return <li key={index}><span>{key}:</span> <span>{user.assets.asteroids[key]}</span></li>;
               })}
             </ul>
           </div>
-          <div>
+          <div className="user-tile--box">
             <h3>Resources:</h3>
             <ul>
               {Object.keys(user.assets.resources).map(function(key, index) {
-                return <li key={index}>{key}: {user.assets.resources[key]}</li>;
+                return <li key={index}><span>{key}:</span> <span>{user.assets.resources[key]}</span></li>;
               })}
             </ul>
           </div>
         </div>
-        <div style={divFlex}>
-          <div>
-            <h3>Income:</h3>
-            <table style={tableStyle}>
+        <div className="row">
+          <h3>Income:</h3>
+          <div class="u-flex u-center">
+            <table className="income-table">
               <tr>
                 <th>
                   Resource:

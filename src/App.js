@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import UserTile from './Components/UserTile';
 import socketIOClient from 'socket.io-client';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import './App.css';
 
 class App extends Component {
@@ -23,12 +25,11 @@ class App extends Component {
   render() {
     const { response } = this.state;
     return (
-      <div className="App">
+      <div className="container App">
         <header className="App-header">
           <h1 className="App-title">Space Game</h1>
         </header>
         {response ? response.users.map((user, index) => { return <UserTile key={index} user={user} economy={response.config.economy} />; }) : ''}
-
       </div>
     );
   }
