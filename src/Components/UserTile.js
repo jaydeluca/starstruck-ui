@@ -42,8 +42,9 @@ export default class UserTile extends React.PureComponent { // eslint-disable-li
         </div>
         <div className="row">
           <h3>Income:</h3>
-          <div class="u-flex u-center">
+          <div className="u-flex u-center">
             <table className="income-table">
+              <tbody>
               <tr>
                 <th>
                   Resource:
@@ -86,6 +87,7 @@ export default class UserTile extends React.PureComponent { // eslint-disable-li
                   {mining.planet + mining.crystalAsteroid}
                 </td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>
