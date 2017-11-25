@@ -35,7 +35,7 @@ export default class UserTile extends React.PureComponent { // eslint-disable-li
             <h3>Resources:</h3>
             <ul>
               {Object.keys(user.assets.resources).map(function(key, index) {
-                return <li key={index}><span>{key}:</span> <span>{user.assets.resources[key]}</span></li>;
+                return <li key={index}><span>{key}:</span> <span>{delimitNumbers(user.assets.resources[key])}</span></li>;
               })}
             </ul>
           </div>
@@ -92,4 +92,9 @@ export default class UserTile extends React.PureComponent { // eslint-disable-li
       </div>
     );
   }
+}
+function delimitNumbers(str) {
+  return (str + "").replace(/\b(\d+)((\.\d+)*)\b/g, function(a, b, c) {
+    return (b.charAt(0) > 0 && !(c || ".").lastIndexOf(".") ? b.replace(/(\d)(?=(\d{3})+$)/g, "$1,") : b) + c;
+  });
 }
