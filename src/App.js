@@ -28,7 +28,20 @@ class App extends Component {
       <div className="container App">
         <header className="App-header">
           <h1 className="App-title">Space Game</h1>
+          <h2>Tick #{response ? response.tick.position : '1'}</h2>
         </header>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Rankings</th>
+            </tr>
+          </thead>
+          <tbody>
+            {response ? response.tick.rankings.map((user, index) => {
+              return <tr><td>{user.user}:</td><td>{user.score}</td></tr>
+            }) : ''}
+          </tbody>
+        </table>
         {response ? response.users.map((user, index) => { return <UserTile key={index} user={user} economy={response.config.economy} />; }) : ''}
       </div>
     );
